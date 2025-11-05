@@ -51,4 +51,4 @@ python scripts/evaluate_models.py
 
 ## Author
 Jacob M. Ramey - Virginia Tech | ECE 5554 Computer Vision  
-Paras Goda     - Virginia Tech | ECE 5554 Computer Vision  
+Paras Goda     - Virginia Tech | ECE 5554 Computer Vision  https://github.com/gawdygoda
