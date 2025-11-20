@@ -104,7 +104,7 @@ help:
 	@echo ""
 	@echo "Parking Detector - LPR Makefile Commands"
 	@echo ""
-	@echo " Docker:"
+	@echo " Docker (local):"
 	@echo "   make build            Build Docker image"
 	@echo "   make push             Push image to Docker Hub"
 	@echo "   make run              Launch Jupyter Lab via docker-compose"

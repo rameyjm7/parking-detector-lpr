@@ -5,9 +5,9 @@ This directory contains the complete containerization setup for reproducible GPU
 
 ---
 
-# Makefile Targets
+# Makefile Targets (*Currenly the VT ARC HPC does not support Docker directly*)
 
-## Docker Targets
+## Docker (Local only) Targets
 
 ### `make build`
 Builds the Docker image using the Dockerfile in this directory.
