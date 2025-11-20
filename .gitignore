@@ -3,3 +3,4 @@ data/openalpr
 data/pklot
 *.tar.gz
 *.zip
+*.sif
