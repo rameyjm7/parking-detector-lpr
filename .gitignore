@@ -1,9 +1,6 @@
-data/*
-data/pklot/*
-data/openalpr/*
-data/ccpd/*
-!data/pklot/
-!data/pklot/getPKLotDataSet.sh
+data/ccpd
+data/openalpr
+data/pklot
 *.tar.gz
 *.zip
 *.sif
