@@ -22,17 +22,13 @@ The system integrates object detection, classification, and OCR pipelines to aut
 │   ├── pklot/
 │   ├── cnrpark/
 │   ├── ccpd/
-│   ├── openalpr/
-│   └── pklot_yolo/
+│   └── openalpr/
 │
 ├── source/
 │   ├── download_datasets.py
-│   ├── preprocess_images.py
-│   ├── preprocess_datasets.py
-│   ├── train_yolo.py
-│   ├── train_convnext.py
-│   ├── train_cnn.py
-│   ├── evaluate_models.py
+│   ├── preprocess_pklot_yolo.py
+│   ├── train_pklot_yolo.py
+│   ├── evaluate_pklot_yolo.py
 │   ├── visualize_results.py
 │   ├── ocr_pipeline.py
 │   ├── detect_spaces.py
@@ -40,7 +36,7 @@ The system integrates object detection, classification, and OCR pipelines to aut
 │
 ├── notebooks/
 │   ├── eda_pklot.ipynb
-│   └── export_yolo.ipynb
+│   └── export_pklot_yolo.ipynb
 │
 ├── docker/
 │   ├── Dockerfile
@@ -48,12 +44,14 @@ The system integrates object detection, classification, and OCR pipelines to aut
 │   └── Makefile
 │
 ├── models/
+│   ├── pklot/
 │   ├── yolo/
 │   ├── convnext/
 │   ├── resnet/
 │   └── cnn/
 │
 ├── results/
+│   ├── pklot/
 │   ├── yolo/
 │   ├── convnext/
 │   ├── cnn/
