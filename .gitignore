@@ -1,6 +1,6 @@
-data/ccpd
-data/openalpr
-data/pklot
+data/*
 *.tar.gz
 *.zip
 *.sif
+source/*.pt
+
