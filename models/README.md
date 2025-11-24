@@ -27,7 +27,7 @@ pklot_yolov11_obb_best.pt
 ## Usage
 
 ### PKLot
-Prediciton and validation code can be found in the [source](../source/test_pklot.py) folder. You can set the 'USE_OBB' flag at top of the code to select the task.
+Prediciton and validation code can be found in the [source](../source/evaluate_pklot_yolo.py) folder. You can set the 'USE_OBB' flag at top of the code to select the task.
 
 
 
