@@ -14,13 +14,13 @@ Models are fine-tuned with YOLOv8/v11 on a NVIDA GPU with the PKLot dataset. Sel
 ```
 pklot_yolov8_aabb_best.pt
 ```
-This model was trained with the `detect` task to discover Axis-Aligned Bounding Boxes and classificaion. 
+- Above model was trained with the `detect` task to discover Axis-Aligned Bounding Boxes and classificaion. 
 
 
 ```
 pklot_yolov11_obb_best.pt
 ```
-This model was trained with the `oob` task to discover Oriented Bounding Boxes and classificaion.
+- Above model was trained with the `oob` task to discover Oriented Bounding Boxes and classificaion.
 
 ---
 
