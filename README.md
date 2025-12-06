@@ -1,99 +1,144 @@
 # Parking Detector and License Plate Recognition (LPR)
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Deep%20Learning-PyTorch%20%7C%20Ultralytics%20YOLO-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/Computer%20Vision-OpenCV%20%7C%20EasyOCR-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/Model%20Export-ONNX-lightgrey?style=flat-square" />
+  <img src="https://img.shields.io/badge/Datasets-PKLot%20%7C%20CNRPark%20%7C%20CCPD-lightgrey?style=flat-square" />
+</p>
+
+---
+
 ## Overview
-This Computer Vision project detects vehicles, classifies parking space occupancy, and recognizes license plates in real-world parking lot footage.  
-The system integrates object detection, classification, and OCR pipelines to automate parking analytics.
+
+This repository implements a full **parking analytics and license plate recognition system**, following the same structure and presentation style as the original Google Sites project page.
+
+The system includes:
+
+- **Parking space occupancy detection** (YOLOv8 fine‑tuned on PKLot)
+- **Vehicle detection and tracking**
+- **License plate detection**
+- **OCR-based plate recognition** via EasyOCR or Tesseract
+- **ONNX export** for deployment and hardware acceleration
+
+---
 
 ## Features
-- Vehicle Detection using YOLOv8, ResNet, or a custom CNN-based model
-- Parking Occupancy Analysis using ROI mapping and car centroid tracking
-- License Plate Recognition via EasyOCR / Tesseract
-- Comparative Evaluation of YOLO, ResNet, and CNN on accuracy, speed, and robustness
-- Visualization Tools for annotated detections and parking space overlays
+
+- YOLOv8-based detection pipeline  
+- Parking ROI mapping and binary occupied/empty classification  
+- License plate cropping and OCR decoding  
+- Evaluation of YOLO-small vs YOLO-nano variants  
+- Visualization utilities for processed outputs  
+- Containerized workflows for GPU and HPC environments  
+
+---
 
 ## Datasets
-- PKLot – Parking occupancy classification  
-- CNRPark-EXT – Extended parking space dataset  
-- CCPD / OpenALPR – License plate detection and OCR datasets
 
-## Repository Structure (TBD)
-```
-├── data/
-│   ├── pklot/
-│   ├── cnrpark/
-│   ├── ccpd/
-│   └── openalpr/
-│
-├── source/
-│   ├── download_datasets.py
-│   ├── preprocess_pklot_yolo.py
-│   ├── train_pklot_yolo.py
-│   ├── evaluate_pklot_yolo.py
-│   ├── visualize_results.py
-│   ├── ocr_pipeline.py
-│   ├── detect_spaces.py
-│   └── evaluate_ocr.py
-│
-├── notebooks/
-│   ├── eda_pklot.ipynb
-│   └── export_pklot_yolo.ipynb
-│
-├── docker/
-│   ├── Dockerfile
-│   ├── docker-compose.yml
-│   └── Makefile
-│
-├── models/
-│   ├── pklot/
-│   ├── yolo/
-│   ├── convnext/
-│   ├── resnet/
-│   └── cnn/
-│
-├── results/
-│   ├── pklot/
-│   ├── yolo/
-│   ├── convnext/
-│   ├── cnn/
-│   └── comparisons/
-│
-├── report/
-│   ├── final_report.docx
-│   ├── figures/
-│   └── tables/
-│
-├── video/
-│   ├── script.txt
-│   ├── raw_clips/
-│   └── final_edit.mp4
-│
-└── README.md
-```
+- **PKLot** – Parking space occupancy  
+- **CNRPark‑EXT** – Large parking dataset with varied lighting  
+- **CCPD / OpenALPR** – License plate datasets  
+
+---
 
 ## Environment Setup
-For all local development and HPC workflows, see the Docker setup guide:
 
-**[docker/README.md](docker/README.md)**
+See the Docker setup guide:
 
-## Training and Evaluation
-Run detection model training (YOLO / ResNet / CNN):
+**docker/README.md**
+
+---
+
+## Training & Evaluation
+
+Train detector models:
+
 ```bash
 python source/train_models.py
 ```
 
-Evaluate models and generate comparative results:
+Evaluate models:
+
 ```bash
 python source/evaluate_models.py
 ```
 
-## Deliverables
-- **Final Report** (Due Dec 7) – Full methodology, experiments, and results  
-- **Project Video** (Due Dec 10) – 1–2 minute narrated summary with demos
+Export model to ONNX:
+
+```bash
+python export_pklot_yolo.py --onnx
+```
+
+---
 
 ## Authors
-Jacob M. Ramey – Virginia Tech | ECE 5554 Computer Vision  
-Paras Goda – Virginia Tech | ECE 5554 Computer Vision  
+
+Jacob M. Ramey – Virginia Tech, ECE 5554  
+Paras Goda – Virginia Tech, ECE 5554  
 GitHub: https://github.com/gawdygoda
 
-## High Level Plan
-<img width="1496" height="1141" src="https://github.com/user-attachments/assets/11b514b3-b238-4f05-beb5-d79ebf8ae31b" />
+---
+
+# Photos & Captions
+
+Below, each photo includes its corrected caption based strictly on the label you provided.
+
+---
+
+## Parking space occupancy  
+<img src="https://github.com/user-attachments/assets/63b81163-07af-413f-98ad-46da0e5b2ec5" />
+
+---
+
+## License plate recognition  
+<img src="https://github.com/user-attachments/assets/6cea82a2-d69d-4a37-adb0-dd43a52ad121" />
+
+---
+
+## YOLO‑World zero‑shot car and empty spot detection  
+<img src="https://github.com/user-attachments/assets/5a42af45-24e6-4ed5-816a-5e568b7d9873" />
+
+---
+
+## Plate crops and OCR output  
+<img src="https://github.com/user-attachments/assets/453ee7cf-c817-40e8-9489-c5f7d551e1a5" />
+<img src="https://github.com/user-attachments/assets/8f4c90d8-6260-48ac-8eed-a6715af4f80f" />
+
+---
+
+## OCR challenges with angled or low‑resolution plates  
+<img src="https://github.com/user-attachments/assets/57bb12a4-545e-4c16-9215-295121dd94d3" />
+
+---
+
+## PKLot original parking space occupancy  
+<img src="https://github.com/user-attachments/assets/6f136b20-7a46-49aa-a6e3-c51c1eb8800a" />
+
+---
+
+## YOLO‑small vs YOLO‑nano result comparison  
+<img src="https://github.com/user-attachments/assets/a6904b28-8e9b-4d66-bc73-ec37234023a3" />
+
+---
+
+<img src="https://github.com/user-attachments/assets/4494798c-be83-467b-befe-e8c9866ca89d" />
+
+---
+## Oriented bounding boxes vs axis‑aligned – reduced overlap  
+<img src="https://github.com/user-attachments/assets/122fa0c4-1c38-44ad-8838-8e8cb450294e" />
+
+---
+## Heatmap: time‑of‑day / day‑of‑week occupancy  
+<img src="https://github.com/user-attachments/assets/291a4d89-e997-40e9-8cc2-940986540afe" />
+
+---
+## Empty‑spot distribution by day – box & whisker plot  
+<img src="https://github.com/user-attachments/assets/4c6443ed-a569-4d27-bf68-022be3aa4c9b" />
+
+---
+
+## Distorted image ground‑truth labels vs trained model output  
+<img src="https://github.com/user-attachments/assets/99682f8a-9053-4b06-8cd6-ecacf9243931" />
+
