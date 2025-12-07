@@ -83,10 +83,6 @@ GitHub: https://github.com/gawdygoda
 
 # Photos & Captions
 
-Below, each photo includes its corrected caption based strictly on the label you provided.
-
----
-
 ## Parking space occupancy  
 <img src="https://github.com/user-attachments/assets/63b81163-07af-413f-98ad-46da0e5b2ec5" />
 
