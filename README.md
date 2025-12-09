@@ -25,6 +25,8 @@ The system includes:
 - **OCR-based plate recognition** via EasyOCR or Tesseract
 - **ONNX export** for deployment and hardware acceleration
 
+alternate site: https://sites.google.com/view/parking-detector-lpr
+
 ---
 
 ## Features
