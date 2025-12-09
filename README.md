@@ -10,6 +10,9 @@
 
 ---
 
+## Presentation
+[![Parking Detector + LPR Presentation](https://img.youtube.com/vi/yMmgbRg9xZE/0.jpg)](https://www.youtube.com/watch?v=yMmgbRg9xZE)
+
 ## Overview
 
 This repository implements a full **parking analytics and license plate recognition system**, following the same structure and presentation style as the original Google Sites project page.
